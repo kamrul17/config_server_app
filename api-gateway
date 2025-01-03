@@ -1,0 +1,9 @@
+spring.application.name=api-gateway
+server.port=3333
+spring.cloud.gateway.discovery.locator.enabled=true
+spring.cloud.gateway.routes[0].id=welcome
+spring.cloud.gateway.routes[0].uri=lb://welcome
+spring.cloud.gateway.routes[0].predicates[0]=Path=/welcome
+spring.cloud.gateway.routes[1].id=greet
+spring.cloud.gateway.routes[1].uri=lb://greet
+spring.cloud.gateway.routes[1].predicates[0]=Path=/greet
